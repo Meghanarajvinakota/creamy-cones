@@ -35,11 +35,66 @@ def welcome():
             print("Your choice sholud be Y or N\n")
             return welcome()
 
+class IcecreamMenu:
+    """
+    Ice cream Flavours menu class type
+    """
+    def __init__(self, name,flavour):
+        self.name = name
+        self.flavour = flavour
+
+    def print(self):
+        """
+        Print selected icecream
+        """
+        return self.name+" " +self.flavour
+
+icecream_menu = {
+    "1": IcecreamMenu("Strawberry", "flavour"),
+    "2": IcecreamMenu("Vanilla","flavour"),
+    "3": IcecreamMenu("Chocolate","flavour"),
+    "4": IcecreamMenu("Pistachio","flavour"),
+    "5": IcecreamMenu("Mango","flavour"),
+    "6": IcecreamMenu("Banana","flavour")
+}
+def select_icecream():
+    """
+    To select the flavour of icecream
+    """
+    for index, icecream in icecream_menu.items():
+        print(index, icecream.name)
+    print(
+        "\nPlease pick the flavour from the menu\n"
+        "If you've changed your mind,\n"
+        "press E to Exit.\n"
+    )
+    while True:
+        user_input = input("Enter number: \n")
+        user_input = user_input.strip().lower()
+        if user_input == "e":
+            print("see you next time!")
+            sys.exit()
+            break
+        elif user_input in icecream_menu:
+            print(
+                "\nYou have chosen our",
+                icecream_menu[user_input].print(),"\n"
+            )
+            break
+        else:
+            print(
+                "\nInvalid!\n"
+                "Please enter number between 1-6 or E\n"
+            )
+    return icecream_menu[user_input]
+
+
 def main():
     """
     Run all program functions
     """
     welcome()
+    icecream = select_icecream()
 
 
 main()
