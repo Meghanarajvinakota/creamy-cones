@@ -135,6 +135,31 @@ def select_size():
 
     return cone_size[user_size_input]
 
+def select_quantity():
+    """
+    To slect quantity of cones
+    """
+    print("\nHow many Ice creams you want to order?\n"
+    "You can order upto 8.\n"
+    "Press E to Exit.\n")
+    while True:
+        user_quantity_input = input("Please enter quantity: \n")
+        user_quantity_input = user_quantity_input.strip().lower()
+        if user_quantity_input == "e":
+            print("See you next time")
+            sys.exit()
+            break
+        elif user_quantity_input >= str(1) and user_quantity_input <= str(8):
+            print("\nYou have selected a quantity of", user_quantity_input)
+            break
+        else:
+            print(
+                "\nInvalid\n"
+            )
+    return user_quantity_input
+   
+
+
 def main():
     """
     Run all program functions
@@ -142,6 +167,7 @@ def main():
     welcome()
     icecream = select_icecream()
     conesize = select_size()
+    quantity = select_quantity()
 
 
 main()
