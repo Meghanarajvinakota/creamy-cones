@@ -49,6 +49,14 @@ class IcecreamMenu:
         """
         return self.name+" " +self.flavour
 
+class ConeSize:
+    """
+    Cone size class type
+    """
+    def  __init__(self,label,price):
+        self.label = label
+        self.price = price
+
 icecream_menu = {
     "1": IcecreamMenu("Strawberry", "flavour"),
     "2": IcecreamMenu("Vanilla","flavour"),
@@ -56,6 +64,10 @@ icecream_menu = {
     "4": IcecreamMenu("Pistachio","flavour"),
     "5": IcecreamMenu("Mango","flavour"),
     "6": IcecreamMenu("Banana","flavour")
+}
+cone_size  = {
+    "S": ConeSize("Small",3),
+    "L": ConeSize("Large",5)
 }
 def select_icecream():
     """
@@ -72,7 +84,7 @@ def select_icecream():
         user_input = input("Enter number: \n")
         user_input = user_input.strip().lower()
         if user_input == "e":
-            print("see you next time!")
+            print("See you next time!")
             sys.exit()
             break
         elif user_input in icecream_menu:
@@ -89,12 +101,47 @@ def select_icecream():
     return icecream_menu[user_input]
 
 
+
+def select_size():
+    """
+    To slect size of cone
+    """
+    for index, size in cone_size.items():
+        print(index, "-", size.label, "-", "€", size.price)
+    while True:
+        print(
+            "\nPlease select the size of cone.\n"
+            "Enter either S or L\n"
+            "Press E to Exit.\n"
+        )
+        user_size_input = input("Enter size: \n")
+        user_size_input = user_size_input.strip().upper()
+        if user_size_input == "E":
+            print("See you next time!")
+            sys.exit()
+            break
+        elif user_size_input in cone_size:
+            print(
+                "\nYou have chosen a ",
+                cone_size[user_size_input].label,
+                
+                "cone\n"
+            )
+            break
+        else:
+            print(
+                "\nInvalid"
+            )
+
+    return cone_size[user_size_input]
+
 def main():
     """
     Run all program functions
     """
     welcome()
     icecream = select_icecream()
+    conesize = select_size()
 
 
 main()
