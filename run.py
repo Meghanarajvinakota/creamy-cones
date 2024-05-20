@@ -157,7 +157,32 @@ def select_quantity():
                 "\nInvalid\n"
             )
     return user_quantity_input
-   
+
+def add_toppings():
+    """
+    To add toppings
+    """
+    print("Do you want toopings on your icecream?")
+    print("[Y]es or [N]o")
+    print("Press E to Exit.\n")
+    while True:
+        user_toppings_input = input("Enter: \n")
+        user_toppings_input = user_toppings_input.strip().upper()
+        if user_toppings_input == "Y":
+            print("\n Lets take a look at the toppings")
+            break
+        elif user_toppings_input == "N":
+            print("\nNo worries!")
+            break
+        elif user_toppings_input == "E":
+            print("\nSee you next time!")
+            sys.exit()
+            break
+        else:
+            print("\nThat's not right")
+            print("Please enter Y or N\n")
+
+    return user_toppings_input
 
 
 def main():
@@ -168,6 +193,7 @@ def main():
     icecream = select_icecream()
     conesize = select_size()
     quantity = select_quantity()
+    toppings = add_toppings()
 
 
 main()
