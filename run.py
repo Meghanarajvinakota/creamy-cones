@@ -53,9 +53,16 @@ class ConeSize:
     """
     Cone size class type
     """
-    def  __init__(self,label,price):
+    def __init__(self,label,price):
         self.label = label
         self.price = price
+
+class IcecreamToppings:
+    """
+    Toppings class type
+    """
+    def __init__(self,topping):
+        self.topping = topping
 
 icecream_menu = {
     "1": IcecreamMenu("Strawberry", "flavour"),
@@ -68,6 +75,11 @@ icecream_menu = {
 cone_size  = {
     "S": ConeSize("Small",3),
     "L": ConeSize("Large",5)
+}
+icecream_toppings = {
+    "C": IcecreamToppings("Chocolatesyrup"),
+    "M": IcecreamToppings("Marshmallows"),
+    "N": IcecreamToppings("Nuts")
 }
 def select_icecream():
     """
@@ -162,7 +174,7 @@ def add_toppings():
     """
     To add toppings
     """
-    print("Do you want toopings on your icecream?")
+    print("Do you want toppings on your icecream?")
     print("[Y]es or [N]o")
     print("Press E to Exit.\n")
     while True:
@@ -184,7 +196,39 @@ def add_toppings():
 
     return user_toppings_input
 
+def select_toppings():
+    """
+    To select the toppings for icecream
+    """
+    for index, top in icecream_toppings.items():
+        print(index, "-", top.topping)
+    while True:
+        print(
+            "\nPlease select the toppings.\n"
+            "Enter either C , M or N\n"
+            "Press E to Exit.\n"
+        )
+        user_topping_input = input("Enter toppings: \n")
+        user_topping_input = user_topping_input.strip().upper()
+        if user_topping_input == "E":
+            print("See you next time!")
+            sys.exit()
+            break
+        elif user_topping_input in icecream_toppings:
+            print(
+                "\nYou have selected ",
+                icecream_toppings[user_topping_input].topping,
+                
+                "topping\n"
+            )
+            break
+        else:
+            print(
+                "\nInvalid"
+            )
 
+    return icecream_toppings[user_topping_input]
+    
 def main():
     """
     Run all program functions
@@ -194,6 +238,7 @@ def main():
     conesize = select_size()
     quantity = select_quantity()
     toppings = add_toppings()
+    topping = select_toppings()
 
 
 main()
