@@ -216,7 +216,7 @@ def add_toppings():
                         print(
                             "\nInvalid"
                         )
-                    return icecream_toppings[user_topping_input]
+                    
             topping = select_toppings()
 
             break
@@ -300,7 +300,7 @@ def customer_name():
 
     return name
 
-def receipt(order, price):
+def receipt(order, price,name):
     """
     To generate the receipt
     """
@@ -309,6 +309,7 @@ def receipt(order, price):
     print("---------------------------------")
     print("Creamy Cones\nMain street\nDublin\n")
     print("Order #")
+    print("Customer name:", name)
     print(order)
     print("€" + str(price))
     now = datetime.now()
@@ -335,6 +336,6 @@ def main():
         if confirmed.upper() == "Y":
             break
     name = customer_name()
-    bill = receipt(order,price)
+    bill = receipt(order,price,name)
 
 main()
