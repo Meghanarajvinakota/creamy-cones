@@ -281,6 +281,25 @@ def confirm_order():
 
     return user_confirm
 
+def customer_name():
+    """
+   To collect the customer name
+    """
+    print("\nNow... lets take your details\n")
+    while True:
+        name = input("Enter your first name: \n").title()
+        if name.isalpha():
+            break
+        else:
+            print(
+                "\nPlease make sure you entered your "
+                "name correctly"
+            )
+            print("Try again\n")
+
+    return name
+
+    
 def main():
     """
     Run all program functions
@@ -296,5 +315,6 @@ def main():
         confirmed = confirm_order()
         if confirmed.upper() == "Y":
             break
+    name = customer_name()
 
 main()
