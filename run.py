@@ -229,6 +229,20 @@ def add_toppings():
 
     return user_toppings_input
 
+def total_order(quantity, conesize, icecream, toppings):
+    """
+   To display the order back to the customer
+    """
+    print("\nYour order is....\n")
+    result = quantity + " x " + conesize.label + " " +  icecream.name
+    if quantity == str(1):
+        result += " icecream"
+    else:
+        result += " icecreams"
+    if toppings.lower() == "y":
+        result += " with topping"
+    print(result)
+    return result
 
 def main():
     """
@@ -239,6 +253,6 @@ def main():
     conesize = select_size()
     quantity = select_quantity()
     toppings = add_toppings()
-    
+    order = total_order(quantity, conesize, icecream, toppings)
 
 main()
