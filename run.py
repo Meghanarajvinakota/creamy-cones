@@ -72,15 +72,19 @@ icecream_menu = {
     "5": IcecreamMenu("Mango","flavour"),
     "6": IcecreamMenu("Banana","flavour")
 }
+
 cone_size  = {
     "S": ConeSize("Small",3),
     "L": ConeSize("Large",5)
 }
+
 icecream_toppings = {
     "C": IcecreamToppings("Chocolatesyrup"),
     "M": IcecreamToppings("Marshmallows"),
     "N": IcecreamToppings("Nuts")
 }
+
+
 def select_icecream():
     """
     To select the flavour of icecream
@@ -113,7 +117,6 @@ def select_icecream():
     return icecream_menu[user_input]
 
 
-
 def select_size():
     """
     To slect size of cone
@@ -136,7 +139,6 @@ def select_size():
             print(
                 "\nYou have chosen a ",
                 cone_size[user_size_input].label,
-                
                 "cone\n"
             )
             break
@@ -144,8 +146,8 @@ def select_size():
             print(
                 "\nInvalid"
             )
-
     return cone_size[user_size_input]
+
 
 def select_quantity():
     """
@@ -169,6 +171,7 @@ def select_quantity():
                 "\nInvalid\n"
             )
     return user_quantity_input
+
 
 def add_toppings():
     """
@@ -229,6 +232,7 @@ def add_toppings():
 
     return user_toppings_input
 
+
 def total_order(quantity, conesize, icecream, toppings):
     """
    To display the order back to the customer
@@ -244,15 +248,53 @@ def total_order(quantity, conesize, icecream, toppings):
     print(result)
     return result
 
+
+def total_cost(conesize,quantity):
+    """
+    To calculate the total cost for icecreams
+    """
+    total = conesize.price * int(quantity)
+    
+    print("Total cost: €", total)
+    return total
+
+
+def confirm_order():
+    """
+    To confirm the order
+    """
+    print("Please confirm your order")
+    print("[Y]es or [N]o")
+    print("Press E to Exit.\n")
+    while True:
+        user_confirm = input("Enter: \n")
+        user_confirm = user_confirm.strip().upper()
+        if user_confirm == "Y":
+            print("\nyour order is confirmed! ")
+            break
+        elif user_confirm == "N":
+            print("\nTry to order again..\n")
+            break
+        else:
+            print("\nThat's not right")
+            print("Please enter Y or N\n")
+
+    return user_confirm
+
 def main():
     """
     Run all program functions
     """
     welcome()
-    icecream = select_icecream()
-    conesize = select_size()
-    quantity = select_quantity()
-    toppings = add_toppings()
-    order = total_order(quantity, conesize, icecream, toppings)
+    while True:
+        icecream = select_icecream()
+        conesize = select_size()
+        quantity = select_quantity()
+        toppings = add_toppings()
+        order = total_order(quantity, conesize, icecream, toppings)
+        price = total_cost(conesize, quantity)
+        confirmed = confirm_order()
+        if confirmed.upper() == "Y":
+            break
 
 main()
