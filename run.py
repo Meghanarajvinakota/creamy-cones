@@ -319,6 +319,11 @@ def receipt(order, price,name):
 
     return {"time": time}
 
+def update_spreadsheet(row):
+    """
+    To update google worksheet with data obtained
+    """
+    orders_worksheet.append_row(row)
 
 def main():
     """
@@ -337,5 +342,10 @@ def main():
             break
     name = customer_name()
     bill = receipt(order,price,name)
+    row = [
+        name, icecream.name, conesize.label, quantity, toppings, price,
+        bill["time"]
+    ]
+    update_spreadsheet(row)
 
 main()
