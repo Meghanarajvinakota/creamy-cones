@@ -182,6 +182,39 @@ def add_toppings():
         user_toppings_input = user_toppings_input.strip().upper()
         if user_toppings_input == "Y":
             print("\n Lets take a look at the toppings")
+            def select_toppings():
+                """
+                To select the toppings for icecream
+                """
+                for index, top in icecream_toppings.items():
+                    print(index, "-", top.topping)
+                while True:
+                    print(
+                        "\nPlease select the toppings.\n"
+                        "Enter either C , M or N\n"
+                        "Press E to Exit.\n"
+                    )
+                    user_topping_input = input("Enter toppings: \n")
+                    user_topping_input = user_topping_input.strip().upper()
+                    if user_topping_input == "E":
+                        print("See you next time!")
+                        sys.exit()
+                        break
+                    elif user_topping_input in icecream_toppings:
+                        print(
+                            "\nYou have selected ",
+                            icecream_toppings[user_topping_input].topping,
+                            
+                            "topping\n"
+                        )
+                        break
+                    else:
+                        print(
+                            "\nInvalid"
+                        )
+                    return icecream_toppings[user_topping_input]
+            topping = select_toppings()
+
             break
         elif user_toppings_input == "N":
             print("\nNo worries!")
@@ -196,39 +229,7 @@ def add_toppings():
 
     return user_toppings_input
 
-def select_toppings():
-    """
-    To select the toppings for icecream
-    """
-    for index, top in icecream_toppings.items():
-        print(index, "-", top.topping)
-    while True:
-        print(
-            "\nPlease select the toppings.\n"
-            "Enter either C , M or N\n"
-            "Press E to Exit.\n"
-        )
-        user_topping_input = input("Enter toppings: \n")
-        user_topping_input = user_topping_input.strip().upper()
-        if user_topping_input == "E":
-            print("See you next time!")
-            sys.exit()
-            break
-        elif user_topping_input in icecream_toppings:
-            print(
-                "\nYou have selected ",
-                icecream_toppings[user_topping_input].topping,
-                
-                "topping\n"
-            )
-            break
-        else:
-            print(
-                "\nInvalid"
-            )
 
-    return icecream_toppings[user_topping_input]
-    
 def main():
     """
     Run all program functions
@@ -238,7 +239,6 @@ def main():
     conesize = select_size()
     quantity = select_quantity()
     toppings = add_toppings()
-    topping = select_toppings()
-
+    
 
 main()
