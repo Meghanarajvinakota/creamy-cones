@@ -1,5 +1,6 @@
 import sys
 import gspread
+from datetime import datetime
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
@@ -270,7 +271,7 @@ def confirm_order():
         user_confirm = input("Enter: \n")
         user_confirm = user_confirm.strip().upper()
         if user_confirm == "Y":
-            print("\nyour order is confirmed! ")
+            print("\nYour order is confirmed! ")
             break
         elif user_confirm == "N":
             print("\nTry to order again..\n")
@@ -299,7 +300,25 @@ def customer_name():
 
     return name
 
-    
+def receipt(order, price):
+    """
+    To generate the receipt
+    """
+    print("Thank you!\n")
+    print("Here is your receipt")
+    print("---------------------------------")
+    print("Creamy Cones\nMain street\nDublin\n")
+    print("Order #")
+    print(order)
+    print("€" + str(price))
+    now = datetime.now()
+    time = now.strftime("%H:%M:%S")
+    print(time)
+    print("---------------------------------\n")
+
+    return {"time": time}
+
+
 def main():
     """
     Run all program functions
@@ -316,5 +335,6 @@ def main():
         if confirmed.upper() == "Y":
             break
     name = customer_name()
+    bill = receipt(order,price)
 
 main()
