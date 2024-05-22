@@ -52,7 +52,7 @@ def prog_start():
  ###      ####    ##   ##   ####    #####    
     ''')
     print("\n")
-    print(Fore.BLUE + Style.BRIGHT + "           sales & Food Management \n")
+    print(Fore.BLUE + Style.BRIGHT + "          sales & Food Management \n")
     time.sleep(3)
     print(Fore.BLUE + Style.BRIGHT + "(Created for Ordering Purposes -"
           " Copyright: Meghana Vinakota '24)")
@@ -81,7 +81,7 @@ def welcome():
             print("\nLets take a look on the menu...\n")
             break
         elif user_choice == "N" or user_choice == "n":
-            print("See you again!")
+            print(Fore.MAGENTA+"See you again!")
             sys.exit()
         else:
             print(Fore.RED + "Please enter the correct choice")
@@ -153,7 +153,7 @@ def select_icecream():
         user_input = input(Fore.CYAN+"Enter number: \n")
         user_input = user_input.strip().lower()
         if user_input == "e":
-            print("See you next time!")
+            print(Fore.MAGENTA+"See you next time!")
             sys.exit()
             break
         elif user_input in icecream_menu:
@@ -185,7 +185,7 @@ def select_size():
         user_size_input = input(Fore.CYAN+"Enter size: \n")
         user_size_input = user_size_input.strip().upper()
         if user_size_input == "E":
-            print("See you next time!")
+            print(Fore.MAGENTA+"See you next time!")
             sys.exit()
             break
         elif user_size_input in cone_size:
@@ -214,11 +214,12 @@ def select_quantity():
         user_quantity_input = input(Fore.CYAN+"Please enter quantity: \n")
         user_quantity_input = user_quantity_input.strip().lower()
         if user_quantity_input == "e":
-            print("See you next time")
+            print(Fore.MAGENTA+"See you next time")
             sys.exit()
             break
         elif user_quantity_input >= str(1) and user_quantity_input <= str(8):
-            print(Fore.GREEN+"\nYou have selected a quantity of", user_quantity_input)
+            print(Fore.GREEN+"\nYou have selected a quantity of",
+             user_quantity_input)
             break
         else:
             print(Fore.RED+
@@ -253,7 +254,7 @@ def add_toppings():
                     user_topping_input = input(Fore.CYAN+"Enter toppings: \n")
                     user_topping_input = user_topping_input.strip().upper()
                     if user_topping_input == "E":
-                        print("See you next time!")
+                        print(Fore.MAGENTA+"See you next time!")
                         sys.exit()
                         break
                     elif user_topping_input in icecream_toppings:
@@ -276,7 +277,7 @@ def add_toppings():
             print("\nNo worries!")
             break
         elif user_toppings_input == "E":
-            print("\nSee you next time!")
+            print(Fore.MAGENTA+"\nSee you next time!")
             sys.exit()
             break
         else:
