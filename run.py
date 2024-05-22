@@ -73,9 +73,9 @@ def welcome():
     leave if customer dont want to order
     """
     while True:
-        print("Welcome to Creamy Cones!")
+        print(Fore.MAGENTA+"Welcome to Creamy Cones!")
         print("Would you like to order? [Y]es or [N]o\n")
-        user_choice = input("Enter: \n")
+        user_choice = input(Fore.CYAN+"Enter: \n")
         user_choice = user_choice.strip()
         if user_choice == "Y" or user_choice == "y":
             print("\nLets take a look on the menu...\n")
@@ -150,7 +150,7 @@ def select_icecream():
         "press E to Exit.\n"
     )
     while True:
-        user_input = input("Enter number: \n")
+        user_input = input(Fore.CYAN+"Enter number: \n")
         user_input = user_input.strip().lower()
         if user_input == "e":
             print("See you next time!")
@@ -182,7 +182,7 @@ def select_size():
             "Enter either S or L\n"
             "Press E to Exit.\n"
         )
-        user_size_input = input("Enter size: \n")
+        user_size_input = input(Fore.CYAN+"Enter size: \n")
         user_size_input = user_size_input.strip().upper()
         if user_size_input == "E":
             print("See you next time!")
@@ -211,7 +211,7 @@ def select_quantity():
     "You can order upto 8.\n"
     "Press E to Exit.\n")
     while True:
-        user_quantity_input = input("Please enter quantity: \n")
+        user_quantity_input = input(Fore.CYAN+"Please enter quantity: \n")
         user_quantity_input = user_quantity_input.strip().lower()
         if user_quantity_input == "e":
             print("See you next time")
@@ -234,7 +234,7 @@ def add_toppings():
     print("Do you want toppings on your icecream?")
     print("[Y]es or [N]o")
     while True:
-        user_toppings_input = input("Enter: \n")
+        user_toppings_input = input(Fore.CYAN+"Enter: \n")
         user_toppings_input = user_toppings_input.strip().upper()
         if user_toppings_input == "Y":
             print("\n Lets take a look at the toppings")
@@ -250,7 +250,7 @@ def add_toppings():
                         "Enter either C , M or N\n"
                         "Press E to Exit.\n"
                     )
-                    user_topping_input = input("Enter toppings: \n")
+                    user_topping_input = input(Fore.CYAN+"Enter toppings: \n")
                     user_topping_input = user_topping_input.strip().upper()
                     if user_topping_input == "E":
                         print("See you next time!")
@@ -319,7 +319,7 @@ def confirm_order():
     print("Please confirm your order")
     print("[Y]es or [N]o")
     while True:
-        user_confirm = input("Enter: \n")
+        user_confirm = input(Fore.CYAN+"Enter: \n")
         user_confirm = user_confirm.strip().upper()
         if user_confirm == "Y":
             print(Fore.GREEN+"\nYour order is confirmed! ")
@@ -339,7 +339,7 @@ def customer_name():
     """
     print("\nNow... lets take your details\n")
     while True:
-        name = input("Enter your first name: \n").title()
+        name = input(Fore.CYAN+"Enter your first name: \n").title()
         if name.isalpha():
             break
         else:
