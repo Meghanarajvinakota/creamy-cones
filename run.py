@@ -84,7 +84,7 @@ def welcome():
             print("See you again!")
             sys.exit()
         else:
-            print("Please enter the correct choice")
+            print(Fore.RED + "Please enter the correct choice")
             print("Your choice sholud be Y or N\n")
             return welcome()
 
@@ -163,9 +163,9 @@ def select_icecream():
             )
             break
         else:
-            print(
-                "\nInvalid!\n"
-                "Please enter number between 1-6 or E\n"
+            print(Fore.RED+
+                "\nInvalid!\n")
+            print("Please enter number between 1-6 or E\n"
             )
     return icecream_menu[user_input]
 
@@ -196,7 +196,7 @@ def select_size():
             )
             break
         else:
-            print(
+            print(Fore.RED+
                 "\nInvalid"
             )
     return cone_size[user_size_input]
@@ -220,7 +220,7 @@ def select_quantity():
             print("\nYou have selected a quantity of", user_quantity_input)
             break
         else:
-            print(
+            print(Fore.RED+
                 "\nInvalid\n"
             )
     return user_quantity_input
@@ -265,7 +265,7 @@ def add_toppings():
                         )
                         break
                     else:
-                        print(
+                        print(Fore.RED+
                             "\nInvalid"
                         )
                     
@@ -280,7 +280,7 @@ def add_toppings():
             sys.exit()
             break
         else:
-            print("\nThat's not right")
+            print(Fore.RED+"\nThat's not right")
             print("Please enter Y or N\n")
 
     return user_toppings_input
@@ -329,7 +329,7 @@ def confirm_order():
             print("\nTry to order again..\n")
             break
         else:
-            print("\nThat's not right")
+            print(Fore.RED+"\nThat's not right")
             print("Please enter Y or N\n")
 
     return user_confirm
@@ -344,7 +344,7 @@ def customer_name():
         if name.isalpha():
             break
         else:
-            print(
+            print(Fore.RED+
                 "\nPlease make sure you entered your "
                 "name correctly"
             )
