@@ -1,7 +1,20 @@
 import sys
 import gspread
+import time
 from datetime import datetime
 from google.oauth2.service_account import Credentials
+
+# colorama for text formatting
+# tutorial: https://linuxhint.com/colorama-python/
+import colorama
+from colorama import Fore, Back, Style
+
+# initialize colorama
+colorama.init(autoreset=True)
+
+# os library to clear screen
+import os
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -14,6 +27,45 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('creamy-cones')
 orders_worksheet = SHEET.worksheet("orders")
+
+def prog_start():
+    """
+    Run opening screen for user and gives brief explanation of its use.
+    """
+    print("\n")
+    # Fore and Style options are colorama properties to give the text colours
+    print(Fore.BLUE + Style.BRIGHT + '''
+    ###                                               
+  ##  ##                                              
+ ##        ## ###    ####     #####   ## ##    ##  ## 
+##        ####     ##   ##  ##   ##  #######  ##  ##  
+##        ##      ######## ##    ##  ## # ##  ##  ##  
+##  ##   ##       ##       ##  ###  ##   ##    ####   
+ ###     ##        ####     ### ##  ##   ##      ##   
+                                              ####    
+    ###                                      
+  ##  ##                                     
+ ##         ####   ## ###     ####     ##### 
+##        ##   ##  ###  ##  ##   ##   ##     
+##       ##    ##  ##   ## ########    ##    
+##  ##   ##   ##  ##   ##  ##           ##   
+ ###      ####    ##   ##   ####    #####    
+    ''')
+    print("\n")
+    print(Fore.BLUE + Style.BRIGHT + "           sales & Food Management \n")
+    time.sleep(3)
+    print(Fore.BLUE + Style.BRIGHT + "(Created for Ordering Purposes -"
+          " Copyright: Meghana Vinakota '24)")
+    time.sleep(3)
+    clearScreen()
+
+# clear screen function
+# Credit: https://www.101computing.net/python-typing-text-effect/
+def clearScreen():
+    """
+    Function for clearing CLI for new code
+    """
+    os.system("clear")
 
 def welcome():
     """
@@ -329,6 +381,7 @@ def main():
     """
     Run all program functions
     """
+    prog_start()
     welcome()
     while True:
         icecream = select_icecream()
