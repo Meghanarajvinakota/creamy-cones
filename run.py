@@ -157,9 +157,9 @@ def select_icecream():
             sys.exit()
             break
         elif user_input in icecream_menu:
-            print(
+            print(Fore.GREEN+
                 "\nYou have chosen our",
-                icecream_menu[user_input].print(),"\n"
+               Fore.GREEN+ icecream_menu[user_input].print(),"\n"
             )
             break
         else:
@@ -189,10 +189,11 @@ def select_size():
             sys.exit()
             break
         elif user_size_input in cone_size:
-            print(
+            print(Fore.GREEN+
                 "\nYou have chosen a ",
+                Fore.GREEN+
                 cone_size[user_size_input].label,
-                "cone\n"
+                Fore.GREEN+ "cone\n"
             )
             break
         else:
@@ -217,7 +218,7 @@ def select_quantity():
             sys.exit()
             break
         elif user_quantity_input >= str(1) and user_quantity_input <= str(8):
-            print("\nYou have selected a quantity of", user_quantity_input)
+            print(Fore.GREEN+"\nYou have selected a quantity of", user_quantity_input)
             break
         else:
             print(Fore.RED+
@@ -232,7 +233,6 @@ def add_toppings():
     """
     print("Do you want toppings on your icecream?")
     print("[Y]es or [N]o")
-    print("Press E to Exit.\n")
     while True:
         user_toppings_input = input("Enter: \n")
         user_toppings_input = user_toppings_input.strip().upper()
@@ -257,11 +257,11 @@ def add_toppings():
                         sys.exit()
                         break
                     elif user_topping_input in icecream_toppings:
-                        print(
+                        print(Fore.GREEN+
                             "\nYou have selected ",
-                            icecream_toppings[user_topping_input].topping,
+                            Fore.GREEN+ (icecream_toppings[user_topping_input].topping),
                             
-                            "topping\n"
+                            Fore.GREEN+"topping\n"
                         )
                         break
                     else:
@@ -298,7 +298,7 @@ def total_order(quantity, conesize, icecream, toppings):
         result += " icecreams"
     if toppings.lower() == "y":
         result += " with topping"
-    print(result)
+    print(Fore.GREEN+result)
     return result
 
 
@@ -308,7 +308,7 @@ def total_cost(conesize,quantity):
     """
     total = conesize.price * int(quantity)
     
-    print("Total cost: €", total)
+    print(Fore.GREEN+"Total cost: €",total)
     return total
 
 
@@ -318,12 +318,11 @@ def confirm_order():
     """
     print("Please confirm your order")
     print("[Y]es or [N]o")
-    print("Press E to Exit.\n")
     while True:
         user_confirm = input("Enter: \n")
         user_confirm = user_confirm.strip().upper()
         if user_confirm == "Y":
-            print("\nYour order is confirmed! ")
+            print(Fore.GREEN+"\nYour order is confirmed! ")
             break
         elif user_confirm == "N":
             print("\nTry to order again..\n")
