@@ -125,5 +125,12 @@ The Google spreadsheet is used to recieve the data from the user and allow the o
 * Google sheets to store the information
 * [Heroku](https://dashboard.heroku.com/apps) to deploy the project
 * [Am I responsive](https://ui.dev/amiresponsive) to show a mock up of the terminals
-* [colorama](https://pypi.org/project/colorama/) to add colors to the text
+* [ASCII](https://ascii-generator.site)
 
+# Python libraries used
+
+* [Datetime](https://docs.python.org/3/library/datetime.html) to add the time to the receipt and spreadsheet of when the order was placed
+* [UUID](https://thewebdev.info/2021/10/24/how-to-create-a-guid-or-uuid-in-python/?fbclid=IwAR16O6f7oQc62Uo-lG0VW7wzm-_6GxAsuMkFnzIb-5_cKQlTXUveOWsXGgg) to generate a random code to use as an order number
+* [Sys](https://stackoverflow.com/questions/14639077/how-to-use-sys-exit-in-python) to allow the user to exit the function
+* [Gspread](https://docs.gspread.org/en/latest/) to link my google sheet for the owner to see the data of the orders 
+* [Colorama](https://pypi.org/project/colorama/) to add colors to the text
