@@ -106,3 +106,24 @@ All inputs have error messages that informs the user that their input was incorr
 
 ![Spreadsheet](/assets/spreadsheet.png)
 
+## Future features
+
+* To allow the user to order multiple different icecreams at the same time
+
+# Data model
+
+I have based the model on functions used as the steps to request, validate and return data from the user. As each function is executed, return values are collated and confirmed back to the user before sending to the Google spreadsheet.
+
+The Google spreadsheet is used to recieve the data from the user and allow the owner to clearly read and understand what the user has ordered.
+
+# Technology used
+
+* Python to write my programme
+* JavaScript provided in the Code Institute template
+* CSS provided in the Code Institute template
+* HTML provided in the Code Institute template
+* Google sheets to store the information
+* [Heroku](https://dashboard.heroku.com/apps) to deploy the project
+* [Am I responsive](https://ui.dev/amiresponsive) to show a mock up of the terminals
+* [colorama](https://pypi.org/project/colorama/) to add colors to the text
+
