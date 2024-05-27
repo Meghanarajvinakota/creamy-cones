@@ -2,6 +2,7 @@ import sys
 import gspread
 import uuid  # Taken from webdev to generate random order number
 import time
+import os# os library to clear screen
 from datetime import datetime
 from google.oauth2.service_account import Credentials
 
@@ -12,10 +13,6 @@ from colorama import Fore, Back, Style
 
 # initialize colorama
 colorama.init(autoreset=True)
-
-# os library to clear screen
-import os
-
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -28,6 +25,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('creamy-cones')
 orders_worksheet = SHEET.worksheet("orders")
+
 
 def prog_start():
     """
@@ -62,11 +60,14 @@ def prog_start():
 
 # clear screen function
 # Credit: https://www.101computing.net/python-typing-text-effect/
+
+
 def clearScreen():
     """
     Function for clearing CLI for new code
     """
     os.system("clear")
+
 
 def welcome():
     """
@@ -89,11 +90,12 @@ def welcome():
             print("Your choice sholud be Y or N\n")
             return welcome()
 
+
 class IcecreamMenu:
     """
     Ice cream Flavours menu class type
     """
-    def __init__(self, name,flavour):
+    def __init__(self, name, flavour):
         self.name = name
         self.flavour = flavour
 
@@ -101,21 +103,26 @@ class IcecreamMenu:
         """
         Print selected icecream
         """
-        return self.name+" " +self.flavour
+        return self.name+" "+self.flavour
+
 
 class ConeSize:
     """
     Cone size class type
     """
-    def __init__(self,label,price):
+
+    def __init__(self, label, price):
         self.label = label
         self.price = price
+
 
 class IcecreamToppings:
     """
     Toppings class type
     """
-    def __init__(self,topping):
+
+    
+    def __init__(self, topping):
         self.topping = topping
 
 icecream_menu = {
