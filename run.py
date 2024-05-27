@@ -400,7 +400,7 @@ def main():
     bill = receipt(order,price,name)
     row = [
         name, icecream.name, conesize.label, quantity, toppings, price,
-        bill["time"]
+        bill["time"] , bill["id"]
     ]
     update_spreadsheet(row)
 
