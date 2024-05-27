@@ -6,7 +6,7 @@ Therefore I have built a programme which allows the user to place an order onlin
 
 This fully python written programme is run on a mock terminal.
 
-![Am I responsive](assets/Am_i_responsive.png)
+![Am I responsive](/assets/Am_i_responsive.png)
 
 Live app: [Creamy Cones](https://creamy-cones-bcfe661bc605.herokuapp.com/)
 
@@ -32,4 +32,10 @@ As the owner
 
 * I want to provide a simple and easy way of ordering online
 * I want a clear, easy to read spreadsheet of the data from the orders recieved
+
+# Flow chart
+
+I used [lucid flowcharts](https://lucid.app/users/login#/login) to help design the flow and outcomes of the project that the user while face depending on their decisions
+
+![Lucid flowchart](/assets/lucidchart.png)
 
