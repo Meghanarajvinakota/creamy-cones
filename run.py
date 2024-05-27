@@ -1,5 +1,6 @@
 import sys
 import gspread
+import uuid  # Taken from webdev to generate random order number
 import time
 from datetime import datetime
 from google.oauth2.service_account import Credentials
@@ -360,7 +361,9 @@ def receipt(order, price,name):
     print("Here is your receipt")
     print("---------------------------------")
     print("Creamy Cones\nMain street\nDublin\n")
+    identity = str(uuid.uuid4())
     print("Order #")
+    print(identity)
     print("Customer name:", name)
     print(order)
     print("€" + str(price))
@@ -369,7 +372,7 @@ def receipt(order, price,name):
     print(time)
     print("---------------------------------\n")
 
-    return {"time": time}
+    return {"id": identity, "time": time}
 
 def update_spreadsheet(row):
     """
