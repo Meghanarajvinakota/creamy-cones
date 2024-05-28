@@ -121,22 +121,22 @@ class IcecreamToppings:
     Ice cream toppings class type
     """
 
-    
     def __init__(self, topping):
         self.topping = topping
 
+
 icecream_menu = {
     "1": IcecreamMenu("Strawberry", "flavour"),
-    "2": IcecreamMenu("Vanilla","flavour"),
-    "3": IcecreamMenu("Chocolate","flavour"),
-    "4": IcecreamMenu("Pistachio","flavour"),
-    "5": IcecreamMenu("Mango","flavour"),
-    "6": IcecreamMenu("Banana","flavour")
+    "2": IcecreamMenu("Vanilla", "flavour"),
+    "3": IcecreamMenu("Chocolate", "flavour"),
+    "4": IcecreamMenu("Pistachio", "flavour"),
+    "5": IcecreamMenu("Mango", "flavour"),
+    "6": IcecreamMenu("Banana", "flavour")
 }
 
-cone_size  = {
-    "S": ConeSize("Small",3),
-    "L": ConeSize("Large",5)
+cone_size = {
+    "S": ConeSize("Small", 3),
+    "L": ConeSize("Large", 5)
 }
 
 icecream_toppings = {
@@ -165,16 +165,13 @@ def select_icecream():
             sys.exit()
             break
         elif user_input in icecream_menu:
-            print(Fore.GREEN+
-                "\nYou have chosen our",
-               Fore.GREEN+ icecream_menu[user_input].print(),"\n"
-            )
+            print(Fore.GREEN + "\nYou have chosen our",
+               Fore.GREEN + icecream_menu[user_input].print(), "\n")
             break
         else:
-            print(Fore.RED+
+            print(Fore.RED +
                 "\nInvalid!\n")
-            print("Please enter number between 1-6 or E\n"
-            )
+            print("Please enter number between 1-6 or E\n")
     return icecream_menu[user_input]
 
 
@@ -197,17 +194,15 @@ def select_size():
             sys.exit()
             break
         elif user_size_input in cone_size:
-            print(Fore.GREEN+
+            print(Fore.GREEN +
                 "\nYou have chosen a ",
-                Fore.GREEN+
+                Fore.GREEN +
                 cone_size[user_size_input].label,
-                Fore.GREEN+ "cone\n"
-            )
+                Fore.GREEN + "cone\n")
             break
         else:
-            print(Fore.RED+
-                "\nInvalid"
-            )
+            print(Fore.RED +
+                "\nInvalid")
     return cone_size[user_size_input]
 
 
@@ -226,13 +221,11 @@ def select_quantity():
             sys.exit()
             break
         elif user_quantity_input >= str(1) and user_quantity_input <= str(8):
-            print(Fore.GREEN+"\nYou have selected a quantity of",
+            print(Fore.GREEN + "\nYou have selected a quantity of",
              user_quantity_input)
             break
         else:
-            print(Fore.RED+
-                "\nInvalid\n"
-            )
+            print(Fore.RED + "\nInvalid\n")
     return user_quantity_input
 
 
@@ -243,41 +236,36 @@ def add_toppings():
     print("Do you want toppings on your icecream?")
     print("[Y]es or [N]o")
     while True:
-        user_toppings_input = input(Fore.CYAN+"Enter: \n")
+        user_toppings_input = input(Fore.CYAN + "Enter: \n")
         user_toppings_input = user_toppings_input.strip().upper()
         if user_toppings_input == "Y":
             print("\n Lets take a look at the toppings")
+
             def select_toppings():
                 """
                 To select the toppings for icecream
                 """
+
                 for index, top in icecream_toppings.items():
                     print(index, "-", top.topping)
                 while True:
-                    print(
-                        "\nPlease select the toppings.\n"
-                        "Enter either C , M or N\n"
-                        "Press E to Exit.\n"
-                    )
-                    user_topping_input = input(Fore.CYAN+"Enter toppings: \n")
+                    print("\nPlease select the toppings.\n")
+                    print("Enter either C , M or N\n")
+                    print("Press E to Exit.\n")
+                    user_topping_input = input(Fore.CYAN + "Enter toppings:\n")
                     user_topping_input = user_topping_input.strip().upper()
                     if user_topping_input == "E":
                         print(Fore.MAGENTA+"See you next time!")
                         sys.exit()
                         break
                     elif user_topping_input in icecream_toppings:
-                        print(Fore.GREEN+
-                            "\nYou have selected ",
-                            Fore.GREEN+ (icecream_toppings[user_topping_input].topping),
-                            
-                            Fore.GREEN+"topping\n"
-                        )
+                        print(Fore.GREEN + "\nYou have selected ",
+                            Fore.GREEN + 
+                            (icecream_toppings[user_topping_input].topping),
+                            Fore.GREEN + "topping\n")
                         break
                     else:
-                        print(Fore.RED+
-                            "\nInvalid"
-                        )
-                    
+                        print(Fore.RED + "\nInvalid")
             topping = select_toppings()
 
             break
@@ -285,11 +273,11 @@ def add_toppings():
             print("\nNo worries!")
             break
         elif user_toppings_input == "E":
-            print(Fore.MAGENTA+"\nSee you next time!")
+            print(Fore.MAGENTA + "\nSee you next time!")
             sys.exit()
             break
         else:
-            print(Fore.RED+"\nThat's not right")
+            print(Fore.RED + "\nThat's not right")
             print("Please enter Y or N\n")
 
     return user_toppings_input
@@ -300,24 +288,23 @@ def total_order(quantity, conesize, icecream, toppings):
    To display the order back to the customer
     """
     print("\nYour order is....\n")
-    result = quantity + " x " + conesize.label + " " +  icecream.name
+    result = quantity + " x " + conesize.label + " " + icecream.name
     if quantity == str(1):
         result += " icecream"
     else:
         result += " icecreams"
     if toppings.lower() == "y":
         result += " with topping"
-    print(Fore.GREEN+result)
+    print(Fore.GREEN + result)
     return result
 
 
-def total_cost(conesize,quantity):
+def total_cost(conesize, quantity):
     """
     To calculate the total cost for icecreams
     """
     total = conesize.price * int(quantity)
-    
-    print(Fore.GREEN+"Total cost: €",total)
+    print(Fore.GREEN + "Total cost: €", total)
     return total
 
 
@@ -328,19 +315,20 @@ def confirm_order():
     print("Please confirm your order")
     print("[Y]es or [N]o")
     while True:
-        user_confirm = input(Fore.CYAN+"Enter: \n")
+        user_confirm = input(Fore.CYAN + "Enter: \n")
         user_confirm = user_confirm.strip().upper()
         if user_confirm == "Y":
-            print(Fore.GREEN+"\nYour order is confirmed! ")
+            print(Fore.GREEN + "\nYour order is confirmed! ")
             break
         elif user_confirm == "N":
             print("\nTry to order again..\n")
             break
         else:
-            print(Fore.RED+"\nThat's not right")
+            print(Fore.RED + "\nThat's not right")
             print("Please enter Y or N\n")
 
     return user_confirm
+
 
 def customer_name():
     """
@@ -348,19 +336,16 @@ def customer_name():
     """
     print("\nNow... lets take your details\n")
     while True:
-        name = input(Fore.CYAN+"Enter your first name: \n").title()
+        name = input(Fore.CYAN + "Enter your first name: \n").title()
         if name.isalpha():
             break
         else:
-            print(Fore.RED+
-                "\nPlease make sure you entered your "
-                "name correctly"
-            )
+            print(Fore.RED + "\nPlease check you entered correct name")
             print("Try again\n")
-
     return name
 
-def receipt(order, price,name):
+
+def receipt(order, price, name):
     """
     To generate the receipt
     """
@@ -381,11 +366,13 @@ def receipt(order, price,name):
 
     return {"id": identity, "time": time}
 
+
 def update_spreadsheet(row):
     """
     To update google worksheet with data obtained
     """
     orders_worksheet.append_row(row)
+
 
 def main():
     """
@@ -404,11 +391,12 @@ def main():
         if confirmed.upper() == "Y":
             break
     name = customer_name()
-    bill = receipt(order,price,name)
+    bill = receipt(order, price, name)
     row = [
         name, icecream.name, conesize.label, quantity, toppings, price,
-        bill["time"] , bill["id"]
+        bill["time"], bill["id"]
     ]
     update_spreadsheet(row)
+
 
 main()
