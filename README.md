@@ -105,6 +105,12 @@ All inputs have error messages that informs the user that their input was incorr
 * The user's data is then updated to the spreadsheet for the owner to see and start making their order
 
 ![Spreadsheet](/assets/spreadsheet.png)
+ 
+### Order again
+* The user can order again after getting receipt
+* It will will display the menu if user select yes
+
+![again](/assets/again.png)
 
 ## Future features
 
