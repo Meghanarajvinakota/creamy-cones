@@ -150,3 +150,44 @@ I have manually tested thi sproject by doing the following:
 * Tested in my local terminal and the Code Institute Heroku terminal
 
 ![PEP8 No errors](/assets/pep8.png)
+
+## User Input Validation  
+User input validation was carried out throughout the project build. It was very important that the user could navigate easily through the program and that their entered name, soze,quanity,order number and price  appropriately into the respective Google Sheets. 
+  
+| Feature                    | Tested?  | User Feedback Provided      |
+|----------------------------|----------|-----------------------------|
+| Order                      | Yes      | Invalid!, Your choice sholud be Y or N|
+| Menu                       | Yes      | Invalid!, Please enter number between 1-6 or E |
+| Size                       | Yes      | Invalid!, Enter either S or L|
+| Quantity                   | Yes      | Invalid!, You can select upto 8 |
+| Toppings                   | Yes      | That's not right, Please enter Y or N |
+| select Toppings            | Yes      | Invalid!, Enter C,M or N |
+| Cofirm Order               | Yes      | That's not right, Please enter Y or N |
+| Name                       | Yes      | Try again!, Please check you entered correct name |
+| Order again                | Yes      | That's not right, Please enter Y or N |
+----- 
+## Browser Testing  
+
+Creamy cones was tested through the Heroku app website on the following browsers with no issues arising:  
+- Google Chrome 
+- Mozilla Firefox 
+- Microsoft Edge 
+- safari
+
+# Unfixed bugs
+
+* There are no unfixed bugs at the time of the last testing
+
+# Deployment
+
+This project was developed through Gitpod, using Code Institue's mock terminal for Heroku and their way of linking to Google Sheet API.
+
+## Deploy from GitHub
+
+* Log into your GitHub repository
+* Click 'Settings' in the main Repository menu
+* Click 'Pages' from the left-hand side navigation menu
+* Within the Source section, click the "Branch" button and change from 'None' to 'Main'
+* The page should automatically refresh with a url displayed
+* Test the link by clicking on the url
+

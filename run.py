@@ -242,7 +242,7 @@ def add_toppings():
                     print(index, "-", top.topping)
                 while True:
                     print("\nPlease select the toppings.\n")
-                    print("Enter either C , M or N\n")
+                    print("Enter  C , M or N\n")
                     print("Press E to Exit.\n")
                     user_topping_input = input(Fore.CYAN + "Enter toppings:\n")
                     user_topping_input = user_topping_input.strip().upper()
