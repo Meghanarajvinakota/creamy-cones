@@ -236,3 +236,12 @@ This project was developed through Gitpod, using Code Institue's mock terminal f
 * Open git bash
 * Type ‘git clone’ and then paste the URL you copied. Press Enter.
 
+## Create Data model spreadsheet
+
+* Login to your Google account, create an account if necessary
+* Navigate to Sheets, Googles version of Microsoft Excel
+* Start a new spreadsheet, amend the title at the top i.e., Freds-pizza
+* Create 1 Sheets titling it 'Orders' 
+* In the first row of the Orders sheet, add the following column headers:
+* Name,Icecream,Size,Quantity,Toppings,Price,Time,Id
+
