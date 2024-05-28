@@ -34,25 +34,24 @@ def prog_start():
     print("\n")
     # Fore and Style options are colorama properties to give the text colours
     print(Fore.BLUE + Style.BRIGHT + '''
-         ###                                               
-       ##  ##                                              
-     ##        ## ###    ####     #####   ## ##    ##  ## 
-    ##        ####     ##   ##  ##   ##  #######  ##  ##  
-    ##        ##      ######## ##    ##  ## # ##  ##  ##  
-     ##  ##   ##       ##       ##  ###  ##   ##    ####   
-      ###     ##        ####     ### ##  ##   ##      ##   
-                                                   ####    
-         ###                                      
-       ##  ##                                     
-      ##         ####   ## ###     ####     ##### 
-     ##        ##   ##  ###  ##  ##   ##   ##     
-    ##       ##    ##  ##   ## ########    ##    
-     ##  ##   ##   ##  ##   ##  ##           ##   
-      ###      ####    ##   ##   ####    #####    
+            ╔═══╗
+            ║╔═╗║
+            ║║─╚╬═╦══╦══╦╗╔╦╗─╔╗
+            ║║─╔╣╔╣║═╣╔╗║╚╝║║─║║
+            ║╚═╝║║║║═╣╔╗║║║║╚═╝║
+            ╚═══╩╝╚══╩╝╚╩╩╩╩═╗╔╝
+            ───────────────╔═╝║
+            ───────────────╚══╝
+            ╔═══╗
+            ║╔═╗║
+            ║║─╚╬══╦═╗╔══╦══╗
+            ║║─╔╣╔╗║╔╗╣║═╣══╣
+            ║╚═╝║╚╝║║║║║═╬══║
+            ╚═══╩══╩╝╚╩══╩══╝
     ''')
     print("\n")
     print(Fore.BLUE + Style.BRIGHT + "          sales & Food Management \n")
-    time.sleep(3)
+    time.sleep(2)
     print(Fore.BLUE + Style.BRIGHT + "(Created for Ordering Purposes -"
           " Copyright: Meghana Vinakota '24)")
     time.sleep(3)
@@ -165,12 +164,11 @@ def select_icecream():
             sys.exit()
             break
         elif user_input in icecream_menu:
-            print(Fore.GREEN + "\nYou have chosen our",
-               Fore.GREEN + icecream_menu[user_input].print(), "\n")
+            print(Fore.GREEN + "\nYou have chosen our")
+            print(Fore.GREEN + icecream_menu[user_input].print(), "\n")
             break
         else:
-            print(Fore.RED +
-                "\nInvalid!\n")
+            print(Fore.RED + "\nInvalid!\n")
             print("Please enter number between 1-6 or E\n")
     return icecream_menu[user_input]
 
@@ -182,11 +180,9 @@ def select_size():
     for index, size in cone_size.items():
         print(index, "-", size.label, "-", "€", size.price)
     while True:
-        print(
-            "\nPlease select the size of cone.\n"
-            "Enter either S or L\n"
-            "Press E to Exit.\n"
-        )
+        print("\nPlease select the size of cone.\n")
+        print("Enter either S or L\n")
+        print("Press E to Exit.\n")
         user_size_input = input(Fore.CYAN+"Enter size: \n")
         user_size_input = user_size_input.strip().upper()
         if user_size_input == "E":
@@ -194,15 +190,11 @@ def select_size():
             sys.exit()
             break
         elif user_size_input in cone_size:
-            print(Fore.GREEN +
-                "\nYou have chosen a ",
-                Fore.GREEN +
-                cone_size[user_size_input].label,
-                Fore.GREEN + "cone\n")
+            print(Fore.GREEN + "\nYou have chosen a ")
+            print(Fore.GREEN + cone_size[user_size_input].label)
             break
         else:
-            print(Fore.RED +
-                "\nInvalid")
+            print(Fore.RED + "\nInvalid")
     return cone_size[user_size_input]
 
 
@@ -210,19 +202,19 @@ def select_quantity():
     """
     To slect quantity of cones
     """
-    print("\nHow many Ice creams you want to order?\n"
-    "You can order upto 8.\n"
-    "Press E to Exit.\n")
+    print("\nHow many Ice creams you want to order?\n")
+    print("You can order upto 8.\n")
+    print("Press E to Exit.\n")
     while True:
         user_quantity_input = input(Fore.CYAN+"Please enter quantity: \n")
         user_quantity_input = user_quantity_input.strip().lower()
         if user_quantity_input == "e":
-            print(Fore.MAGENTA+"See you next time")
+            print(Fore.MAGENTA + "See you next time")
             sys.exit()
             break
         elif user_quantity_input >= str(1) and user_quantity_input <= str(8):
-            print(Fore.GREEN + "\nYou have selected a quantity of",
-             user_quantity_input)
+            print(Fore.GREEN + "\nYou have selected a quantity of")
+            print(user_quantity_input)
             break
         else:
             print(Fore.RED + "\nInvalid\n")
@@ -259,15 +251,13 @@ def add_toppings():
                         sys.exit()
                         break
                     elif user_topping_input in icecream_toppings:
-                        print(Fore.GREEN + "\nYou have selected ",
-                            Fore.GREEN + 
-                            (icecream_toppings[user_topping_input].topping),
-                            Fore.GREEN + "topping\n")
+                        print(Fore.GREEN + "\nYou have selected ")
+                        print(icecream_toppings[user_topping_input].topping)
+                        print(Fore.GREEN + "topping\n")
                         break
                     else:
                         print(Fore.RED + "\nInvalid")
             topping = select_toppings()
-
             break
         elif user_toppings_input == "N":
             print("\nNo worries!")
