@@ -357,6 +357,29 @@ def receipt(order, price, name):
     return {"id": identity, "time": time}
 
 
+def order_again():
+    """
+    To order again
+    """
+    print("Would you like to order again?")
+    print("[Y]es or [N]o")
+    while True:
+        user_again = input(Fore.CYAN + "Enter: \n")
+        user_again = user_again.strip().upper()
+        if user_again == "Y":
+            print(Fore.GREEN + "\n Lets order!")
+            icecream = select_icecream()
+            break
+        elif user_again == "N":
+            print("\nSee you again!..\n")
+            sys.exit()
+            break
+        else:
+            print(Fore.RED + "\nThat's not right")
+            print("Please enter Y or N\n")
+    return user_again
+
+
 def update_spreadsheet(row):
     """
     To update google worksheet with data obtained
@@ -387,6 +410,7 @@ def main():
         bill["time"], bill["id"]
     ]
     update_spreadsheet(row)
+    again = order_again()
 
 
 main()
