@@ -2,7 +2,7 @@ import sys
 import gspread
 import uuid  # Taken from webdev to generate random order number
 import time
-import os# os library to clear screen
+import os  # os library to clear screen
 from datetime import datetime
 from google.oauth2.service_account import Credentials
 
@@ -34,21 +34,21 @@ def prog_start():
     print("\n")
     # Fore and Style options are colorama properties to give the text colours
     print(Fore.BLUE + Style.BRIGHT + '''
-    ###                                               
-  ##  ##                                              
- ##        ## ###    ####     #####   ## ##    ##  ## 
-##        ####     ##   ##  ##   ##  #######  ##  ##  
-##        ##      ######## ##    ##  ## # ##  ##  ##  
-##  ##   ##       ##       ##  ###  ##   ##    ####   
- ###     ##        ####     ### ##  ##   ##      ##   
-                                              ####    
-    ###                                      
-  ##  ##                                     
- ##         ####   ## ###     ####     ##### 
-##        ##   ##  ###  ##  ##   ##   ##     
-##       ##    ##  ##   ## ########    ##    
-##  ##   ##   ##  ##   ##  ##           ##   
- ###      ####    ##   ##   ####    #####    
+         ###                                               
+       ##  ##                                              
+     ##        ## ###    ####     #####   ## ##    ##  ## 
+    ##        ####     ##   ##  ##   ##  #######  ##  ##  
+    ##        ##      ######## ##    ##  ## # ##  ##  ##  
+     ##  ##   ##       ##       ##  ###  ##   ##    ####   
+      ###     ##        ####     ### ##  ##   ##      ##   
+                                                   ####    
+         ###                                      
+       ##  ##                                     
+      ##         ####   ## ###     ####     ##### 
+     ##        ##   ##  ###  ##  ##   ##   ##     
+    ##       ##    ##  ##   ## ########    ##    
+     ##  ##   ##   ##  ##   ##  ##           ##   
+      ###      ####    ##   ##   ####    #####    
     ''')
     print("\n")
     print(Fore.BLUE + Style.BRIGHT + "          sales & Food Management \n")
@@ -118,7 +118,7 @@ class ConeSize:
 
 class IcecreamToppings:
     """
-    Toppings class type
+    Ice cream toppings class type
     """
 
     
