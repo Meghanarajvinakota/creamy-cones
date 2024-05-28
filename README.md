@@ -46,7 +46,7 @@ All inputs have error messages that informs the user that their input was incorr
 
 ### Welcome message
 * The user recives a ASCII art as a welcome message
-![Ascii image ](/assets/ascii.png)
+![Ascii image ](/assets/ASCII..png)
 
 * The user recieves a welcome message and an option if they would like to place an order
 
@@ -131,7 +131,7 @@ The Google spreadsheet is used to recieve the data from the user and allow the o
 * Google sheets to store the information
 * [Heroku](https://dashboard.heroku.com/apps) to deploy the project
 * [Am I responsive](https://ui.dev/amiresponsive) to show a mock up of the terminals
-* [ASCII](https://ascii-generator.site)
+* [ASCII](https://fsymbols.com/generators/carty/)
 
 # Python libraries used
 
@@ -140,3 +140,13 @@ The Google spreadsheet is used to recieve the data from the user and allow the o
 * [Sys](https://stackoverflow.com/questions/14639077/how-to-use-sys-exit-in-python) to allow the user to exit the function
 * [Gspread](https://docs.gspread.org/en/latest/) to link my google sheet for the owner to see the data of the orders 
 * [Colorama](https://pypi.org/project/colorama/) to add colors to the text
+
+# Testing
+
+I have manually tested thi sproject by doing the following:
+
+* Passed the code through a PEP8 linter and confirmed there are now no bugs at the time of this test
+* Given invalid inputs to all input choices and made sure they allow the user to carry on with their order
+* Tested in my local terminal and the Code Institute Heroku terminal
+
+![PEP8 No errors](/assets/pep8.png)
