@@ -166,6 +166,8 @@ User input validation was carried out throughout the project build. It was very 
 | Name                       | Yes      | Try again!, Please check you entered correct name |
 | Order again                | Yes      | That's not right, Please enter Y or N |
 ----- 
+
+
 ## Browser Testing  
 
 Creamy cones was tested through the Heroku app website on the following browsers with no issues arising:  
@@ -174,6 +176,35 @@ Creamy cones was tested through the Heroku app website on the following browsers
 - Microsoft Edge 
 - safari
 
+
+## Manual Testing  
+
+### Testing User Stories 
+
+  
+  
+  1. As a User, I want an attractive, engaging application.  
+
+    - Colorama library used to produce text with engaging colours and meaning  
+    - GREEN for confirmation 
+    - RED for invalid input
+    - Purple for welcome meaasages
+    - CYAN for input meassages
+  
+  2. As a User, I want to be provided with clear instructions throughout the application.  
+
+    - All sections requiring user input are signposted with clear instructions on how to proceed
+    - User is prompted with instructions when input provided is invalid
+    - require user to confirm the data before it is updated to the worksheet
+  
+  3. As a user, I want to able to upload the data to google sheets
+
+  4. As a User, I want to be able to navigate back to the Main Menu.  
+    
+    - User wants to order again
+
+  
+    
 # Unfixed bugs
 
 * There are no unfixed bugs at the time of the last testing
@@ -190,4 +221,18 @@ This project was developed through Gitpod, using Code Institue's mock terminal f
 * Within the Source section, click the "Branch" button and change from 'None' to 'Main'
 * The page should automatically refresh with a url displayed
 * Test the link by clicking on the url
+
+## Forking
+
+* Navigate to the [Creamy Cones](https://github.com/Meghanarajvinakota/creamy-cones)
+* Click the 'Fork' button on the upper right part of the page.
+* You will now have a fork of the Fred's pizzas repository added to your GitHub profile.
+
+## Cloning
+
+* Login to Github and go to my [Creamy Cones](https://github.com/Meghanarajvinakota/creamy-cones)
+* Above the list of files click the green ‘code’ button.
+* This will bring up a few options as to how you would like to clone. You can 4. select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
+* Open git bash
+* Type ‘git clone’ and then paste the URL you copied. Press Enter.
 
