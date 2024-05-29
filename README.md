@@ -10,6 +10,31 @@ This fully python written programme is run on a mock terminal.
 
 Live app: [Creamy Cones](https://creamy-cones-bcfe661bc605.herokuapp.com/)
 
+# Table of content
+
+[User Experience](#user-experience)
+
+[Flow Chart](#flow-chart)
+
+[Features](#features)
+
+[Data Model](#data-model)
+
+[Technology used](#technology-used)
+
+[Python libraries used](#python-libraries-used)
+
+[Testing](#testing)
+
+[Bugs](#bugs)
+
+[Unfixed Bugs](#unfixed-bugs)
+
+[Deployment](#deployment)
+
+[Credits](#credits)
+
+
 # User experience
 
 ## User stories
