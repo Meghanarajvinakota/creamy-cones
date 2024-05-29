@@ -8,7 +8,9 @@ This fully python written programme is run on a mock terminal.
 
 ![Am I responsive](/assets/Am_i_responsive.png)
 
-Live app: [Creamy Cones](https://creamy-cones-bcfe661bc605.herokuapp.com/)
+View live application here: [Creamy Cones](https://creamy-cones-bcfe661bc605.herokuapp.com/)
+
+Google Sheets Orders (view only) [here.](https://docs.google.com/spreadsheets/d/1EvlfQAQaNHiLmcT_9nfu8gW1bf-F-wUZ195Z7cXkVns/edit#gid=0)
 
 # Table of content
 
