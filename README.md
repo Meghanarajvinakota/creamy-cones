@@ -240,8 +240,46 @@ This project was developed through Gitpod, using Code Institue's mock terminal f
 
 * Login to your Google account, create an account if necessary
 * Navigate to Sheets, Googles version of Microsoft Excel
-* Start a new spreadsheet, amend the title at the top i.e., Freds-pizza
-* Create 1 Sheets titling it 'Orders' 
+* Start a new spreadsheet, amend the title at the top i.e., Creamy Cones
+* Create 1 Sheet titling it 'Orders' 
 * In the first row of the Orders sheet, add the following column headers:
 * Name,Icecream,Size,Quantity,Toppings,Price,Time,Id
+
+## Set up API
+
+Credit to [Jorgen Brattang](https://github.com/JorgenBrattang/daily-math) for the description
+
+* Head to [Google cloud platform](https://console.cloud.google.com/) and sign in or create a free google account
+* From the google cloud platform dashboard click 'Select a new project'. Then select 'New project'.
+* Create a name for your project under 'Project name' then click 'Create'.
+* This should bring up a box with your project in. Underneath click 'SELECT PROJECT'.
+* From the sidebar navigate to 'APIs and services', 'Library'.
+* In the search bar search for google drive.
+* Select 'Google drive API' and click 'ENABLE'.
+* Click the 'CREATE CREDENTIALS' button located to the top right of the page.
+* From the dropdown menu under 'Which API are you using?' select 'Google drive API'.
+* Under 'What data will you be accessing' choose 'Application data'.
+* Under 'Are you planning to use this API with Compute Engine, Kubernetes Engine, App Engine or Cloud Functions?' select 'No, i'm not using them' and click 'NEXT'.
+* Enter a Service Account Name. You can name it whatever you like. I would suggest naming it the same as what you named your project. Then click 'CREATE AND CONTINUE'.
+* In the 'Role' dropdown menu select 'Basic', 'Editor', then click 'Continue'.
+* The next page can be left blank so just click 'DONE'.
+* Under 'Service Accounts' find the account you just created and click it.
+* Navigate to the 'KEYS' tab and click 'ADD KEY', 'Create new key'. Select 'JSON' and click 'CREATE'.
+* This will download a json file to your machine. This normally downloads into your 'downloads' folder but if you're unsure you can right click the file once it's downloaded and click 'show in folder' to locate it.
+* Next we will have to link the Google Sheets API. To do this navigate back to the library by clicking on the burger icon in the top left hand corner and selecting 'APIs and services', 'Library' from the dropdown menu.
+* In the search bar search for 'Google Sheets' and select 'Google Sheets API' and click 'ENABLE'.
+* Now, using a programme like Gitpod open or create a repository.
+* Drag and drop the json file that you downloaded earlier into your workspace. Rename this file to 'creds.json'.
+* Open the file and copy the email address under 'client_email' without the quotation marks.
+* Open up the google sheet you want to use and click the 'Share' button.
+* Paste in the client email. Make sure 'Editor' is selected, untick 'Notify people' and then click 'Share'.
+* To protect sensitive information be sure to add your creds.json file to your .gitignore file inside your editor.
+* In order to use our google sheets API you need to install two additional dependencies into your project.
+* Copy the following code on the first two lines of your workspace
+
+![gspread](/assets/gspread.png)
+
+* Below this, add the following code:
+
+![scope](/assets/scope.png)
 
