@@ -14,27 +14,27 @@ Google Sheets Orders (view only) [here.](https://docs.google.com/spreadsheets/d/
 
 # Table of content
 
-[User Experience](#user-experience)
+1.[User Experience](#user-experience)
 
-[Flow Chart](#flow-chart)
+2.[Flow Chart](#flow-chart)
 
-[Features](#features)
+3.[Features](#features)
 
-[Data Model](#data-model)
+4.[Data Model](#data-model)
 
-[Technology used](#technology-used)
+5.[Technology used](#technology-used)
 
-[Python libraries used](#python-libraries-used)
+6.[Python libraries used](#python-libraries-used)
 
-[Testing](#testing)
+7.[Testing](#testing)
 
-[Bugs](#bugs)
+8.[Bugs](#bugs)
 
-[Unfixed Bugs](#unfixed-bugs)
+9.[Features](#features)
 
-[Deployment](#deployment)
+10.[Deployment](#deployment)
 
-[Credits](#credits)
+11.[Credits](#credits)
 
 
 # User experience
@@ -139,7 +139,7 @@ All inputs have error messages that informs the user that their input was incorr
 
 ![again](/assets/again.png)
 
-## Future features
+# Future features
 
 * To allow the user to order multiple different icecreams at the same time
 
@@ -201,7 +201,7 @@ Creamy cones was tested through the Heroku app website on the following browsers
 - Google Chrome 
 - Mozilla Firefox 
 - Microsoft Edge 
-- safari
+- Safari
 
 
 ## Manual Testing  
@@ -230,11 +230,6 @@ Creamy cones was tested through the Heroku app website on the following browsers
     
     - User wants to order again
 
-  
-    
-# Unfixed bugs
-
-* There are no unfixed bugs at the time of the last testing
 
 # Deployment
 
@@ -253,7 +248,7 @@ This project was developed through Gitpod, using Code Institue's mock terminal f
 
 * Navigate to the [Creamy Cones](https://github.com/Meghanarajvinakota/creamy-cones)
 * Click the 'Fork' button on the upper right part of the page.
-* You will now have a fork of the Fred's pizzas repository added to your GitHub profile.
+* You will now have a fork of the Creamy cones repository added to your GitHub profile.
 
 ## Cloning
 
