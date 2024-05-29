@@ -283,3 +283,51 @@ Credit to [Jorgen Brattang](https://github.com/JorgenBrattang/daily-math) for th
 
 ![scope](/assets/scope.png)
 
+## Set up Heroku
+
+Credit to [Jorgen Brattang](https://github.com/JorgenBrattang/daily-math) for the description
+
+* The requirements.txt file in the IDE must be updated to package all dependencies. To do this:
+    * Enter the following into the terminal: 'pip3 freeze > requirements.txt'
+    * Commit the changes and push to GitHub
+    
+* Go to Heroku.com and sign in or create a free account.
+* From the heroku dashboard click the 'Create new app' button.
+* Name the app something unique and choose what region you are in then click 'Create app'.
+* Go to the settings tab and find the Config Vars section. Click 'Reveal Config Vars'.
+* In the field for KEY enter the value CREDS in all capitals. 
+* In the field for VALUE copy and paste the entire contents of your creds.json file from your project. Then click 'Add'.
+* In the field for KEY enter PORT in all capitals, then in the field for VALUE enter 8000. Then click 'Add'.
+* Scroll down to the Buildpacks section and click 'Add buildpack'.
+* Click Python then save changes.
+* Add another buildpack by clicking 'Add buildpack' and this time click Nodejs then save changes.
+* Make sure that Python appears above Nodejs in the buildpack section. If it does not you can click and drag them to change the order.
+* Then head over to the deploy section by clicking deploy from the nav bar at the top of the page.
+* From the 'Deployment method' section select GitHub and click 'Connect to GitHub'.
+* Enter the repository name as it is in GitHub and click 'search'.
+* Click the 'connect' button next to the repository to link it to heroku.
+* To deploy, scroll down and click the 'Deploy Branch' button.
+* Heroku will notify you that the app was successfully deployed with a button to view the app.
+* If you want to rebuild your app automatically you can also select the 'Enable Automatic Deploys' button which will then rebuild the app every time you push any changes.
+
+
+# Credits
+
+I used [Jorgen Brattang](https://github.com/JorgenBrattang/daily-math) for the description on how the deployment process of the API google sheet and Heroku went
+
+I used [Stack overflow](https://stackoverflow.com/questions/14639077/how-to-use-sys-exit-in-python) for the code to allow the user to exit the system
+
+![sys.exit()](/assets/import.png)
+
+![sys.exit()](/assets/exit.png)
+
+I used [The web dev](https://thewebdev.info/2021/10/24/how-to-create-a-guid-or-uuid-in-python/?fbclid=IwAR16O6f7oQc62Uo-lG0VW7wzm-_6GxAsuMkFnzIb-5_cKQlTXUveOWsXGgg) for the code to generate a random code for my order numbers
+
+![UUID](/assets/uuid.png)
+
+![UUID](/assets/uuid1.png)
+
+I used [Colorama](https://pypi.org/project/colorama/) for to add colors to text
+
+![colorama](/assets/colorama.png)
+

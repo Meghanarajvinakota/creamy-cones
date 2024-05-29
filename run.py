@@ -1,4 +1,4 @@
-import sys
+import sys  # Allows the user to exit the system
 import gspread
 import uuid  # Taken from webdev to generate random order number
 import time
